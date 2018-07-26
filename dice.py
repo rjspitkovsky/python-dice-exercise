@@ -6,7 +6,7 @@ def get_number():
 
 
 def roll_dice():
-    decision = raw_input("Would you like to roll the dice? yes/no ")
+    decision = raw_input("Would you like to roll the dice? yes/no ").strip()
 
     if decision == "yes" or decision == "Yes":
         get_number()
