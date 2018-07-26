@@ -1,11 +1,24 @@
+def get_number():
+    from random import randint
+    print(randint(1, 6))
 
 
-decision = raw_input("Would you like to roll the dice? Yes/No ")
 
-if decision == "No":
-    print("Thank you for playing.")
-    exit()
 
-if decision != "No" and decision != "Yes":
-    print("That answer was insufficient. Would you like to roll the dice? Yes/No")
-    decision = raw_input("Would you like to roll the dice? Yes/No ")
+def roll_dice():
+    decision = raw_input("Would you like to roll the dice? yes/no ")
+
+    if decision == "yes" or decision == "Yes":
+        get_number()
+        roll_dice()
+
+    if decision == "no" or decision == "No":
+        print("Thank you for playing.")
+        exit()
+
+    if decision != "no" and decision != "yes":
+        print("That answer was insufficient.")
+        roll_dice()
+
+
+roll_dice()
